@@ -18,13 +18,12 @@ class UserCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           ProfileAvatar(imageUrl: user.imageUrl),
-          const SizedBox(
-            width: 6.0,
-          ),
-          Text(
-            user.name,
-            style: const TextStyle(
-              fontSize: 16.0,
+          const SizedBox(width: 6.0),
+          Flexible(
+            child: Text(
+              user.name,
+              style: const TextStyle(fontSize: 16.0),
+              overflow: TextOverflow.ellipsis,
             ),
           )
         ],
